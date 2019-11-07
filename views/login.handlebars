@@ -1,0 +1,18 @@
+
+
+  <div id="loginContainer">
+<form action="/login" method="POST">
+
+    {{#each message}}
+        <div class="errors">{{this}}</div>
+    {{/each}}
+    
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+
+    <button type="submit">Login</button>
+
+</form>  </div>

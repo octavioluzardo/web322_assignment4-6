@@ -1,3 +1,4 @@
+@media only screen and (min-width: 1200px) {
 *{
     margin: 0.5rem;
     padding: 0;
@@ -14,8 +15,8 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 8rem;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
   }
 
 #logo {
@@ -50,7 +51,7 @@ a:hover{
 }
 #searchContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto;
     padding: 2rem;
     margin: 3rem;
 }
@@ -59,7 +60,7 @@ a:hover{
     grid-column: 1/span 1;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     background-color: white;
     color: black;
     padding: 2rem;
@@ -69,10 +70,10 @@ a:hover{
 }
 
 #searchRoom > h3{
-    grid-column: 1/span 2;
-    height: max-content;
+    grid-column: auto;
+    height: auto;
     padding: 1rem;
-    width: max-content;
+    width: auto;
 }
 #cities{
     grid-row: 2/span 1;
@@ -99,7 +100,7 @@ a:hover{
     background-color: crimson;
     border-radius: 10px;
     width: 8vw;
-    height: 6vh;
+    height: auto;
     float: right;
     margin: 1rem 0rem 1rem 2rem;
     font-size: 1.3rem;
@@ -196,16 +197,14 @@ footer > p{
     display: grid;
     background-color: white;
     color: black;
-}
-#blue{
-    color: blue;
-}
-
-#registrationContainer{
     text-align: center;
     width: max-content;
     margin: 5rem;
     border-radius: 10px;
+}
+
+#blue{
+    color: blue;
 }
 
 #signUpBtn{
@@ -213,9 +212,253 @@ footer > p{
     border-radius: 10px;
     font-size: 1.3rem;
     width: 20vw;
-    height: 3vh;
+    height: auto;
     margin: 1rem 0rem 1rem 2rem;
 }
 #promooptout{
     width: auto;
+}
+
+#loginContainer{
+    display: grid;
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: max-content;
+    margin: 5rem;
+    border-radius: 10px;
+}}
+
+
+@media only screen and (max-width: 1199px){
+    *{
+        margin: 0.5rem;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    body{
+        background-image: url("../img/backgroundMain.jpg");
+        background-repeat: no-repeat no-repeat;
+        background-position: center center;
+        color: white;  
+        background-size: cover;
+    }
+    
+    header{
+        display: grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+      }
+    
+    #logo {
+        height: 100px;
+        width: 300px;
+        display: inline-block;
+        padding: 1rem;
+    }
+    a{
+        color: white;
+        text-transform: none;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    .navigation{
+        grid-column:auto;
+        text-align:right;
+        font-size: 1.4rem;
+        padding:3rem;
+    }
+    #promotion{
+        display: grid;
+        background-color: crimson;
+        color: white;
+        width: auto;
+        height: 4vh;
+        margin: 3rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    #searchContainer{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 2rem;
+        margin: 3rem;
+    }
+    
+    #searchRoom{
+        grid-column: auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 10px;
+        width: auto;
+    }
+    
+    #searchRoom > h3{
+        grid-column: auto;
+        height: auto;
+        padding: 1rem;
+        width: auto;
+    }
+    #cities{
+        grid-row: 2/span 1;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    #numberofGuests{
+        grid-row: 5/span 1;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    #infoContainer{
+        grid-column: auto; 
+        display: grid;
+        background-color: white;
+        color: black;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 10px;
+        height: max-content;
+        width: auto;
+    }
+    #submitBtn{
+        background-color: crimson;
+        border-radius: 10px;
+        width: 8vw;
+        height: auto;
+        float: right;
+        margin: 1rem 0rem 1rem 2rem;
+        font-size: 1.3rem;
+    }
+    #submitBtnContainer{
+        grid-row: 6/span 1;
+        grid-column: 1/span 1;
+    }
+    
+    footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 1rem;
+    
+    }
+    footer > p{
+        font-size: 1.1rem;
+        display: inline;
+        grid-template-columns: 1/span 1; 
+    }
+    .icons{
+        grid-column: 2/span 1; 
+        color: white;
+        display: inline;
+        text-align:right;
+      }
+      .icons > a{
+          padding: 0.5rem;
+      }
+    
+      #checkin{
+          grid-row: 3/span 1;
+          grid-column: 1/span 1;
+      }
+      #checkin>label{
+          margin-right: 4.5rem;
+      }
+      #checkout{
+        grid-row: 4/span 1;
+        grid-column: 1/span 1;
+      
+    }
+    
+    #sixlistings{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #listingone{
+        grid-column: 1/span 1;
+        grid-row: 1/span 1;
+        padding: 1rem;
+    }
+    #listingtwo{
+        grid-column: 2/span 1;
+        grid-row: 1/span 1;
+        padding: 1rem;
+    }
+    #listingthree{
+        grid-column: 3/span 1;
+        grid-row: 1/span 1;
+        padding: 1rem;
+    }
+    #listingfour{
+        grid-column: 1/span 1;
+        grid-row: 2/span 1;
+        padding: 1rem;
+    }
+    #listingfive{
+        grid-column: 2/span 1;
+        grid-row: 2/span 1;
+        padding: 1rem;
+    }
+    #listingsix{
+        grid-column: 3/span 1;
+        grid-row: 2/span 1;
+        padding: 1rem;
+    }
+    
+    .listingcontainer{
+        display: grid;
+        background-color: white;
+        color: black;
+        width: max-content;
+    }
+    #headerRooms{
+        text-align: center;
+    }
+    
+    #registrationContainer{
+        display: grid;
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: max-content;
+        margin: 5rem;
+        border-radius: 10px;
+    }
+    
+    #blue{
+        color: blue;
+    }
+    
+    #signUpBtn{
+        background-color: crimson;
+        border-radius: 10px;
+        font-size: 1.3rem;
+        width: 20vw;
+        height: auto;
+        margin: 1rem 0rem 1rem 2rem;
+    }
+    #promooptout{
+        width: auto;
+    }
+    
+    #loginContainer{
+        display: grid;
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: max-content;
+        margin: 5rem;
+        border-radius: 10px;
+    }
 }
