@@ -69,7 +69,7 @@ a:hover{
     width: auto;
   }
     
-  .homeSearchBtn {
+  .searchBtn {
     text-align: center;
     color: white;
     background-color: crimson;
@@ -154,7 +154,6 @@ a:hover{
   justify-content: left;
     margin-left: 2rem;
   }
-  
   
   .pageFooter
   {

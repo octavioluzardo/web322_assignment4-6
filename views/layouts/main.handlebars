@@ -9,19 +9,19 @@
 <body>
      <header>
         <nav class="navigation"> 
-          <a class = "text-white" href="/"> Home </a>
-          <a class = "text-white" href="/rooms"> Rooms </a>
-          <a class = "text-white" href="/user/registration"> Register </a>
+          <a href="/"> Home </a>
+          <a href="/rooms"> Rooms </a>
+          <a href="/user/registration"> Register </a>
           {{#if user}}
               {{#if user.admin}}
               <a href="/user/adminDashboard"> Dashboard </a></a>
-              <a class = "text-white" href="/user/logout"> Log Out </a>
+              <a href="/user/logout"> Log Out </a>
               {{else}}
               <a href="/user/nonAdminDashboard"> Dashboard </a></a>
-              <a class = "text-white" href="/user/logout"> Log Out </a>
+              <a href="/user/logout"> Log Out </a>
               {{/if}}   
           {{else}}
-          <a class = "text-white" href="/user/loginPage"> Log in </a>
+          <a href="/user/loginPage"> Log in </a>
           {{/if}}
         </nav>
       </div>
