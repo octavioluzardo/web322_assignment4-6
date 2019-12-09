@@ -5,8 +5,9 @@ const path = require("path");
 const nodemailer = require('nodemailer');
 const sgTransport = require('nodemailer-sendgrid-transport');
 const hasAccess= require("../middleware/authentication");
-
+const Book = require("../models/book");
 const User = require("../models/User");
+const Rooms = require("../models/Rooms");
 
 router.get("/loginPage", (req,res)=>{
     res.render("loginPage")
@@ -15,10 +16,12 @@ router.get("/registration", (req,res)=>{
     res.render("registration")
 });
 router.get("/adminDashboard", hasAccess,(req,res)=>{
-    res.render("adminDashboard")
+    Book.find({userId: req.session.userInfo._id})
+    .then(books => res.render("adminDashboard", {books})) 
 });
 router.get("/nonAdminDashboard",hasAccess,(req,res)=>{
-    res.render("nonAdminDashboard");
+    Book.find({userId: req.session.userInfo._id})
+    .then(books => res.render("nonAdminDashboard", {books})) 
 });
 router.get("/editRooms", hasAccess,(req,res)=>{
     res.render("editRooms");
@@ -63,7 +66,8 @@ router.post("/loginPage",(req,res)=>{
             //This means that there was no matching email in the database
             if(user==null)
             {
-                errors.push("Sorry your email was not found");
+                errors.push("Sorry your email/password is incorrect");
+                console.log("Incorrect password");
                 res.render("loginPage",{
                     message: errors
                 })
@@ -94,7 +98,8 @@ router.post("/loginPage",(req,res)=>{
                     }
                     else
                     {
-                        errors.push("Sorry, your password does not match");
+                        errors.push("Sorry your email/password is incorrect");
+                        console.log("Incorrect password");
                         res.render("loginPage",{
                             message:errors
                         })
@@ -189,7 +194,32 @@ router.post("/registration",(req,res)=>{
         console.log(`Email was not inserted into the database because ${err}`)
     })
 }
-        
+
+
+
+
+});
+
+router.get("/booking/:id", hasAccess, (req, res) =>{
+    Rooms.findById(req.params.id)
+    .then(rooms=> {
+        const booking = {
+            roomId: rooms._id,
+            userId: req.session.userInfo._id,
+            roomName: rooms.roomName,
+            roomLocation: rooms.roomLocation,
+            roomPrice: rooms.roomPrice,
+        }
+        const newbooking = new Book(booking)
+        newbooking.save()
+        .then(()=>{
+            res.redirect('/user/nonAdminDashboard') 
+         })
+         .catch(err=>console.log(`Error : ${err}`));
+    })
+    .catch((error) => {
+        res.redirect(`/rooms`)
+        console.log(`Something went wrong.`)})
 });
 
 module.exports=router;

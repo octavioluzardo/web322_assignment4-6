@@ -1,5 +1,5 @@
 <div>
-    <div class="whitebox">
+    <div class="whitegrid">
         <section class="roomGrid">
             {{#each Rooms}}
             <div>
@@ -10,7 +10,12 @@
                     {{this.roomLocation}}<br>
                     ${{this.roomPrice}} CAD per night<br>
                     {{#if ../user.admin}}
-                    <a href="/Rooms/editROOMS/{{this._id}}">Edit Room</a></a>
+                    <a href="/Rooms/editROOMS/{{this._id}}"> Edit Room </a></a>
+                    <a href="/user/booking/{{this._id}}"> Book this Room </a>
+                    {{else}}
+                        {{#if ../user}}
+                        <a href="/user/booking/{{this._id}}"> Book this Room </a>
+                        {{/if}}
                     {{/if}}
                 </div>
             </div>

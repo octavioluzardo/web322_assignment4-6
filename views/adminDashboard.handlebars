@@ -1,11 +1,22 @@
 <div class="loginPage">
-
-    <div class="whitebox">
+    <div class="whitegrid">
         <div><br>Welcome to your dashboard {{user.firstName}} {{user.lastName}} <br></div>
         <div><br>You are logged in as an admin<br></div>
         <a href="/rooms/adminRooms"> Add a room </a>
-        <br>
+        <br><br>
     </div>
-
+    <h3>Booked rooms:</h3><br>
+    <section class="roomGrid">
+        {{#each books}}
+        <div>
+            <div class="roomInfo">
+            {{this.roomName}}
+            <br>
+            ${{this.roomPrice}}CAD/night
+            <br>
+            </div>
+        {{/each}}
+        </div>
+    </section>
 </div>
 

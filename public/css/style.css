@@ -76,9 +76,8 @@ a:hover{
     width: 20vw;
   }
   
-  .whitebox {
-  background-color: whitesmoke;
-  opacity: 0.95;
+  .whitegrid {
+  background-color: white;
   border: 3px solid white;
   height: auto;
   width: 100%;
@@ -204,7 +203,7 @@ a:hover{
     color: rgb(145, 22, 22)
   }
   
-  #refFormNudge {
+  #form {
     width: 25vw;
     margin-top: 4rem;
   }
@@ -228,7 +227,7 @@ a:hover{
       margin-bottom: 8px;
       text-align: left;
   }
-  .registrationPage {
+  .register {
     padding: 25px;
   }
 

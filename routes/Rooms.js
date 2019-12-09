@@ -4,7 +4,6 @@ const path = require("path");
 const nodemailer = require('nodemailer');
 const sgTransport = require('nodemailer-sendgrid-transport');
 const hasAccess= require("../middleware/authentication");
-
 const Rooms = require("../models/Rooms");
 
 

@@ -7,7 +7,6 @@ const fileupload = require("express-fileupload");
 const session = require("express-session");
 require("dotenv").config();
 
-//import your router objects
 const userRoutes = require("./routes/User");
 const generalRoutes = require("./routes/General");
 const roomsRoutes = require("./routes/Rooms");
@@ -19,7 +18,7 @@ app.use(fileupload())
 app.use(methodOverride('_method'));
 app.use(express.static("public"));
 
-app.use(session({secret:"This is my secret key. This should not be shown to everyone"}))
+app.use(session({secret:`${process.env.dbusername} is the master`}))
 
 app.use((req,res,next)=>{
     res.locals.user= req.session.userInfo;
