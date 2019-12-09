@@ -25,12 +25,12 @@ router.get("/editRooms", hasAccess,(req,res)=>{
 })
 
 router.get("/logout",(req,res)=>{
-    //This destorys the session
+    //This destroys the session
     req.session.destroy();
     res.redirect("/user/loginPage");
 
 });
-//--------------------------------------------------------
+
 router.post("/loginPage",(req,res)=>{
 
     const errors =[];
