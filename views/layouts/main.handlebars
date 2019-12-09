@@ -11,7 +11,6 @@
         <nav class="navigation"> 
           <a href="/"> Home </a>
           <a href="/rooms"> Rooms </a>
-          <a href="/user/registration"> Register </a>
           {{#if user}}
               {{#if user.admin}}
               <a href="/user/adminDashboard"> Dashboard </a></a>
@@ -21,6 +20,7 @@
               <a href="/user/logout"> Log Out </a>
               {{/if}}   
           {{else}}
+          <a href="/user/registration"> Register </a>
           <a href="/user/loginPage"> Log in </a>
           {{/if}}
         </nav>
