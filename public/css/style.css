@@ -10,6 +10,24 @@
     opacity: 0.9;
   }
   
+header
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 8rem;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.navigation{
+    grid-column: 1/ span 1;
+    text-align:left;
+    font-size: 1.4rem;
+    padding:3rem;
+}
   #promotion
   {
     display: grid;
@@ -22,36 +40,7 @@
     padding: 1rem;
   }
 
-  .navbar
-  {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100vw;
-  }
-  .navbar > .logo
-  {
-    grid-column: 1/ span 1;
-    font-size: 2rem;
-    Color: White;
-  }
-  
-  .navbar > nav
-  {
-    grid-column:3/ span 1;
-    Color: white;
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    display: flex;
-    justify-content: space-between;
-    width: 33vw;
-  }
-  
-  .navbar > a {
-    justify-content: right;
-  }
-  
-  
+   
   .formReg {
     
     text-align: center;
@@ -79,43 +68,11 @@
     text-align: center;
     width: auto;
   }
-  #checkIO {
-  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     
-  }
-  
-  #checkIn {
-    grid-column: 1/ span 1;
-    display:grid;
-    grid-template-rows: 1fr 1fr; 
-    width: 15vw;
-  }
-  #checkIn > .ci {
-    grid-row: 1/span 1;
-  }
-  #checkIn > .checkInDate {
-    grid-row: 2/span 1;
-  }
-  #checkOut {
-  
-    grid-column: 2/ span 1;
-    display:grid;
-    grid-template-rows: 1fr 1fr; 
-    width: 15vw;
-  
-  }
-  #checkOut > .co {
-    grid-row: 1/span 1;
-  }
-  #checkOut > .checkOutDate {
-    grid-row: 2/span 1;
-  }
-  
   .homeSearchBtn {
     text-align: center;
-    border: 2px solid red;
+    color: white;
+    background-color: crimson;
     width: 20vw;
   }
   
@@ -274,4 +231,20 @@
   }
   .registrationPage {
     padding: 25px;
+  }
+
+ footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+
+}
+  .icons{
+    grid-column: 2/span 1; 
+    color: black;
+    display: inline;
+    text-align:right;
+  }
+  .icons > a{
+      padding: 0.5rem;
   }
