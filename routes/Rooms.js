@@ -7,9 +7,6 @@ const hasAccess= require("../middleware/authentication");
 
 const Rooms = require("../models/Rooms");
 
-router.get("/searchRooms", hasAccess, (req, res) => {
-    res.render("searchRooms");
-})
 
 router.get("/adminRooms", hasAccess, (req, res) => {
     res.render("adminRooms");
@@ -112,7 +109,8 @@ router.put("/editRooms/:id",hasAccess,(req,res)=>
         .catch(err=>console.log(`Error : ${err}`));
 
     })
-    .catch(err=>console.log(`Error : ${err}`));
+    .catch(err=>console
+        .log(`Error : ${err}`));
 });
 
 

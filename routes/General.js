@@ -7,12 +7,12 @@ router.get("/",(req,res)=>
     res.render("home");
 });
 
-router.get("/Rooms",(req,res)=>{
+router.get("/rooms",(req,res)=>{
     const query = {}
     if(req.query.location){query.roomLocation=req.query.location}
     Rooms.find(query)
     .then(Rooms => {
-        res.render("Rooms", {Rooms})
+        res.render("rooms", {Rooms})
     })
 });
 
