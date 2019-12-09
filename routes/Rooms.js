@@ -63,7 +63,7 @@ router.post("/adminRooms", hasAccess, (req,res)=>{
         .then(room=>{
             //rename file to include the userid            
             //upload file to server
-            req.files.roomPicture.name = `db_${rm._id}${path.parse(req.files.roomPicture.name).ext}`
+            req.files.roomPicture.name = `db_${room._id}${path.parse(req.files.roomPicture.name).ext}`
             req.files.roomPicture.mv(`public/uploadedIMG/${req.files.roomPicture.name}`)
             .then(()=>{
                 //Then is needed to refer to associate the uploaded image to the user

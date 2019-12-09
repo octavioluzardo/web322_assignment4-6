@@ -9,42 +9,18 @@
         <div class="card-body">
              <div class="formInput">
                 <form  method="GET" action="/rooms">             
-                        <h2>Book unique places to stay and things to do.</h2>
-                    <label class="d-flex justify-content-start"> Where</label>
+                        <h3>Book unique places to stay and things to do.</h3>
+                    <label class="d-flex justify-content-start"> Please select a location</label><br>
                     <div id="where" class="d-flex justify-content-start"> 
                         <select id="location" name="location">
-                          <option value="null">Select a location</option>
+                          <option value="null"></option>
                           <option value="toronto">Toronto</option>
                           <option value="ottawa">Ottawa</option>
                           <option value="vancouver">Vancouver</option>
                           <option value="montreal">Montreal</option>
                           <option value="edmonton">Edmonton</option>
                         </select>
-                    </div>
-
-                        <div id="checkIO">
-                            <div id="checkIn">
-                            <label class="cio ci"> CHECK-IN </label>
-                            <input type="date" id="checkInDate" placeholder="mm/dd/yyyy"></input>
-                            </div>
-                            <div id="checkOut">
-                            <label class="cio co"> CHECK-OUT</label>
-                                <input type="date" id="checkOutDate" placeholder="mm/dd/yyyy"></input>
-                            </div>
-                        </div>   
-                    <label class="d-flex justify-content-start guestlabel"> Guests</label>
-                    <div class="d-flex justify-content-start">
-                        <select id="guestQty" placeholder="Guests">
-                            <option value=null>QTY</option>
-                            <option value=1>1</option>
-                            <option value=2>2</option>
-                            <option value=3>3</option>
-                            <option value=4>4</option>
-                            <option value=5>5</option>
-                            <option value=6>6</option>
-                            <option value=7>7</option>
-                        </select>
-                    </div>
+                    </div><br>
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-danger homeSearchBtn">Search</button>
                     </div>
