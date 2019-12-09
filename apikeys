@@ -1,5 +1,0 @@
-Send-grid: 
-    API KEY:  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
-echo "export SENDGRID_API_KEY='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'" > sendgrid.env
-echo "sendgrid.env" >> .gitignore
-source ./sendgrid.env
